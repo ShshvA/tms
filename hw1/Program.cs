@@ -19,6 +19,7 @@ Console.WriteLine($"Остаток от деление a % b = {a % b}");
 Console.WriteLine();
 
 int c = a;
+int d = b;
 Console.WriteLine($"Постфиксный инкремент a++ : a = {c++}");
 Console.WriteLine($"Новое значение после инкремента: a  = {c}");
 Console.WriteLine();
@@ -33,6 +34,12 @@ Console.WriteLine();
 c = a;
 Console.WriteLine($"Префиксный декремент --a : a = {--c}");
 Console.WriteLine($"Новое значение после декремента: a  = {c}");
+Console.WriteLine();
+c = a;
+Console.WriteLine($"Значение выражения 2 * a++ + ( b-- - 1 ) = {2 * c++ + (d-- - 1)}");
+c = a;
+d = b;
+Console.WriteLine($"Значение выражения 2 * ++a + ( --b - 1 ) = {2 * ++c + (--d - 1)}");
 Console.WriteLine();
 
 Console.WriteLine($"Возведение в степень: {a}^{b} = {Math.Pow(a, b):f2}");
