@@ -3,7 +3,19 @@ int b = GetInputValue("Введите целочисленное число b: "
 
 Console.WriteLine($"\nВведенные числа: a = {a}, b = {b}");
 
-Console.WriteLine($"Введенные числа: a = {a}, b = {b}");
+PrintBasicOperations(a, b);
+PrintIncrementOperations(a, b);
+PrintMathOperation(a, b);
+PrintBitwiseOperations(a, b);
+int GetInputValue(string message)
+{
+    while (true)
+    {
+        Console.Write(message);
+        if (int.TryParse(Console.ReadLine(), out int result))
+            return result;
+        else
+            Console.WriteLine("Ошибка ввода. Введите целочисленное число.");
 
     }
 }
