@@ -3,19 +3,7 @@ int b = GetInputValue("Введите целочисленное число b: "
 
 Console.WriteLine($"\nВведенные числа: a = {a}, b = {b}");
 
-PrintBasicOperations(a, b);
-PrintIncrementOperations(a, b);
-PrintMathOperation(a, b);
-PrintBitwiseOperations(a, b);
-int GetInputValue(string message)
-{
-    while(true)
-    {
-        Console.Write(message);
-        if (int.TryParse(Console.ReadLine(), out int result))
-            return result;
-        else
-            Console.WriteLine("Ошибка ввода. Введите целочисленное число.");
+Console.WriteLine($"Введенные числа: a = {a}, b = {b}");
 
     }
 }
@@ -60,8 +48,7 @@ void PrintMathOperation(int a, int b)
         Console.WriteLine($"\tКвадратный корень из отрицательного числа {a} не вычисляется");
     Console.WriteLine($"\tМодуль разности: |{a} - {b}| = {Math.Abs(a - b)}");
 }
-
-static void PrintBitwiseOperations(int a, int b)
+void PrintBitwiseOperations(int a, int b)
 {
     Console.WriteLine("\nПобитовые операции:");
     Console.WriteLine($"\tБитовый сдвиг a << 1 = {a << 1}");
