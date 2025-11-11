@@ -60,7 +60,8 @@ void PrintMathOperation(int a, int b)
         Console.WriteLine($"\tКвадратный корень из отрицательного числа {a} не вычисляется");
     Console.WriteLine($"\tМодуль разности: |{a} - {b}| = {Math.Abs(a - b)}");
 }
-void PrintBitwiseOperations(int a, int b)
+
+static void PrintBitwiseOperations(int a, int b)
 {
     Console.WriteLine("\nПобитовые операции:");
     Console.WriteLine($"\tБитовый сдвиг a << 1 = {a << 1}");
